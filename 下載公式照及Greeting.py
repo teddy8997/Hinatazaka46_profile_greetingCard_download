@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from bs4 import BeautifulSoup as bs
 import requests
 import urllib.request
@@ -15,19 +9,12 @@ import json
 warnings.filterwarnings("ignore")
 
 
-# In[2]:
-
-
 def get_html(url):
     req = urllib.request.Request(url)
     req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36')
     response = urllib.request.urlopen(req)
     html = response.read()
     return html
-
-
-# In[3]:
-
 
 def downloadImg(memName, srcLink, savedir):
     if not os.path.isdir(savedir):
@@ -38,20 +25,7 @@ def downloadImg(memName, srcLink, savedir):
     return "OK"
 
 
-# In[ ]:
-
-
-
-
-
-# In[4]:
-
-
 memList = ["2", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
-
-
-# In[5]:
-
 
 for memNum in memList:
     url = "https://www.hinatazaka46.com/s/official/artist/" + str(memNum) + "?ima=0000"
@@ -63,64 +37,3 @@ for memNum in memList:
     downloadImg(memName, memPic, "Pic")
     downloadImg(memName, memCard, "Greeting")
     print(memName)
-
-
-# In[ ]:
-
-
-
-
-
-# In[76]:
-
-
-
-
-
-# In[77]:
-
-
-
-
-
-# In[78]:
-
-
-
-
-
-# In[79]:
-
-
-
-
-
-# In[80]:
-
-
-
-
-
-# In[81]:
-
-
-
-
-
-# In[82]:
-
-
-
-
-
-# In[83]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
