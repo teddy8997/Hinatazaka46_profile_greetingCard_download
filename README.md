@@ -1,0 +1,2 @@
+# Hinatazaka46_profile_greetingCard_download
+ 自動下載日向坂46成員公式照及Greetin Card
